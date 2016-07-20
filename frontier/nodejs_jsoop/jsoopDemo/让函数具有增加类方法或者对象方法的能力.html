@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		//让每一个函数都有为自己本身增加属性或者方法的能力,实际上是让类具有增加新的类方法相当于OC中的类方法,并且能链式调用;
+		/*Function.prototype.addMethod=function(name,fn){
+			this[name]=fn;
+			return this;
+		}*/
+		//让每一个函数都有为函数的Prototype增加属性或者方法的能力,实际上是让类具有增加新的对象方法相当于OC中的对象方法,并能链式调用;
+		
+			Function.prototype.addMethod=function(name,fn){
+				this.prototype[name]=fn;
+				return this;
+			}
+			
+		function CheckAll () {
+			 
+		}
+		//为CheckAll的类增加对象方法checkName;
+		CheckAll.addMethod("checkName",function() {
+			console.log("checkName方法加到了checkAll类中的prototype");
+			return this;
+	    //为CheckAll的类增加对象方法checkEmil;
+		}).addMethod("checkEmail",function() {
+			console.log("checkEMail方法加到了checkAll类中的prototype");
+			return this;
+		});
+		var checkNameAndMail=new CheckAll();
+        checkNameAndMail.checkName().checkEmail();
+        //为函数new出的对象初始化属性的方法有两种第一种:在函数内部用this赋值,第二种在函数内部为prototype函数赋值,这就相当于OC中的对象方法;
+        //prototype有点像Node中的exports其本质是一个{};也就是json空对象;
+		</script>
+	</body>
+</html>
