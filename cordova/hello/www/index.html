@@ -1,49 +1,91 @@
-<!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
+<!doctype html>
 <html>
-    <head>
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
-            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-    </body>
+<head>
+<meta charset="utf-8">
+<title>纯CSS3实现的图片切换幻灯片代码</title>
+</head>
+
+<body>
+<center>
+	<section id="rt-showcase-surround">
+		<div id="rt-showcase" class="slider-container rt-overlay-dark">
+			<div class="rt-container slider-container">
+				<div class="rt-grid-12 rt-alpha rt-omega">
+					
+					<link rel="stylesheet" href="css/style.css">
+					<!--[if IE]><link rel="stylesheet" href="css/ie.css"><![endif]-->
+					<!--[if lte IE 9]><script type="text/javascript" src="js/ie.js"></script><![endif]-->
+	
+					<div class="csslider1">
+						<input name="cs_anchor1" autocomplete="off" id="cs_slide1_0" type="radio" class="cs_anchor slide" >
+						<input name="cs_anchor1" autocomplete="off" id="cs_slide1_1" type="radio" class="cs_anchor slide" >
+						<input name="cs_anchor1" autocomplete="off" id="cs_slide1_2" type="radio" class="cs_anchor slide" >
+						<input name="cs_anchor1" autocomplete="off" id="cs_play1" type="radio" class="cs_anchor" checked>
+						<input name="cs_anchor1" autocomplete="off" id="cs_pause1" type="radio" class="cs_anchor" >
+						<ul>
+							<div style="width: 100%; visibility: hidden; font-size: 0px; line-height: 0;">
+								<img src="images/1.jpg" style="width: 100%;">
+							</div>
+							<li class="num0 img">
+								<img src="images/1.jpg" alt="Clouds" title="Clouds" />
+							</li>
+							<li class="num1 img">
+								<img src="images/2.jpg" alt="Typewriter" title="Typewriter" />
+							</li>
+							<li class="num2 img">
+								<img src="images/3.jpg" alt="Bicycle" title="Bicycle" />
+							</li>
+						
+						</ul>
+						<div class="cs_description">
+							<label class="num0">
+								<span class="cs_title"><span class="cs_wrapper">Clouds</span></span>
+								
+							</label>
+							<label class="num1">
+								<span class="cs_title"><span class="cs_wrapper">Typewriter</span></span>
+								
+							</label>
+							<label class="num2">
+								<span class="cs_title"><span class="cs_wrapper">Bicycle</span></span>
+								
+							</label>
+						</div>
+						
+						<div class="cs_arrowprev">
+							<label class="num0" for="cs_slide1_0"></label>
+							<label class="num1" for="cs_slide1_1"></label>
+							<label class="num2" for="cs_slide1_2"></label>
+						</div>
+						<div class="cs_arrownext">
+							<label class="num0" for="cs_slide1_0"></label>
+							<label class="num1" for="cs_slide1_1"></label>
+							<label class="num2" for="cs_slide1_2"></label>
+						</div>
+						
+						<div class="cs_bullets">
+							<label class="num0" for="cs_slide1_0">
+								<span class="cs_point"></span>
+								<span class="cs_thumb"><img src="images/small/1.jpg" alt="Clouds" title="Clouds" /></span>
+							</label>
+							<label class="num1" for="cs_slide1_1">
+								<span class="cs_point"></span>
+								<span class="cs_thumb"><img src="images/small/2.jpg" alt="Typewriter" title="Typewriter" /></span>
+							</label>
+							<label class="num2" for="cs_slide1_2">
+								<span class="cs_point"></span>
+								<span class="cs_thumb"><img src="images/small/3.jpg" alt="Bicycle" title="Bicycle" /></span>
+							</label>
+						</div>
+						
+					</div>
+	
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</section>        <!-- /slider -->
+</center>
+
+</body>
 </html>
