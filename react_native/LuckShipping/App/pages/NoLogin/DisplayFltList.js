@@ -27,26 +27,26 @@ class DisplayFltList extends Component {
         this.formatNumberDate=this.formatNumberDate.bind(this);
         this.state={
           //数据源
-         dataSource: new ListView.DataSource({rowHasChanged: (row1, row2) => row1 !== row2,
-               })
+         dataSource: new ListView.DataSource({rowHasChanged: (row1, row2) => row1 !== row2,})
+               
          //数据
                }
        
          var _this = this;
          //从缓存中将对象取出来;
          AsyncStorage.getItem("jsonFltList",function(errs,result){
-                    if(errs){
-                      ToastAndroid.show("获取有误!",ToastAndroid.SHORT);
-                    }else{
-                      //因为取出的对象是字符串格式,所以就需要转化为json对象;
-                       var jsonFltList =  JSON.parse(result)
-                      //将转化好的json对象放进state里面;
-                       _this.setState({
-                          fltItems:jsonFltList
-                       })
-                    }
+                                  if(errs){
+                                         ToastAndroid.show("获取有误!",ToastAndroid.SHORT);
+                                  }else{
+                                        //因为取出的对象是字符串格式,所以就需要转化为json对象;
+                                         var jsonFltList =  JSON.parse(result)
+                                        //将转化好的json对象放进state里面;
+                                         _this.setState({
+                                            fltItems:jsonFltList
+                                         })
+                                       }
                 
-            });
+                            });
           
 
 

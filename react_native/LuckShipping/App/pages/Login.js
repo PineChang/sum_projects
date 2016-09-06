@@ -11,6 +11,7 @@ import{
     TextInput,
     Platform,
     ToastAndroid,
+    AsyncStorage,
 } from 'react-native';
 
 
@@ -21,6 +22,8 @@ import {LOCALHOST} from  '../commom/Request';
 
 
 import Loading from '../component/Loading';
+
+import ModulesMain from './Login/ModulesMain';
 
 
 var username = '';
@@ -37,7 +40,7 @@ class Login extends Component {
   
   //用户登录/注册
   buttonRegisterOrLoginAction(position){
-      const {navigator} = this.props;
+     var _this = this;
       if(position === 0){
             //用户登录
            if(username === ''){
@@ -51,22 +54,44 @@ class Login extends Component {
            this.getLoading().show();
           fetch(LOCALHOST,{
 	          method: 'POST',
-			  headers: {
-			    'Accept': 'application/json',
-			    'Content-Type': 'application/json',
-			  },
-			  body: JSON.stringify({
-			     "userinfo.USERNAME": username,
-	                    
-	            "userinfo.PASSWORD": password,
-			  })
+    			  headers: {
+    			    'Accept': 'application/json',
+    			    'Content-Type': 'application/json',
+    			  },
+    			  body: JSON.stringify({
+    			     "userinfo.USERNAME": username,
+    	                    
+    	            "userinfo.PASSWORD": password,
+    			  })
 
-          }).then((response) => response.json()).then((responseJson) => {
+          }).then((response) => response.json())
+            .then((responseJson) => {
 			      	this.getLoading().dismiss(); 
-			         ToastAndroid.show(responseJson.CODE,ToastAndroid.SHORT);
+    			       var jsonUserInfo = responseJson.OTHEROBJ;
+                 AsyncStorage.setItem("strUserInfo",JSON.stringify(jsonUserInfo),function(err){
+
+                   if (!err){
+                    //存储成功的跳转逻辑;
+                      var {navigator} = _this.props;
+                      navigator.push({
+                        component:ModulesMain,
+                        name:"登录后的模块主页"
+                      })
+
+                   }else{
+
+                    //存储失败就
+                    ToastAndroid.show("存储用户信息失败",ToastAndroid.SHORT);
+                   }
+
+
+                 })
+
+
+
 			      }).catch((error) => {
-			        console.error(error);
-			      });
+			           console.error(error);
+			         });
 			     
 			      
 			      

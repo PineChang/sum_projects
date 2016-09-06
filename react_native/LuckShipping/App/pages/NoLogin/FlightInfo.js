@@ -147,20 +147,20 @@ class FlightInfo extends React.Component {
       <View style={{flex:1}}>
            <Image style={{width:width,height:height,resizeMode:'cover'}} source={require('../../imgs/fltQuery.jpg')}>
       
-                <View style={{height:45,backgroundColor:'black',flexDirection:'row'}}>
-                   <View style={{width:45,height:45,justifyContent:'center'}}>
-                     <TouchableOpacity onPress={() => {this.buttonBackAction()}} style={{justifyContent:'center',alignItems:'center'}} >
-                           <Image 
-                                 style={{width:13,height:20}}
-                                 source={require('../../imgs/ic_center_back.png')}
-                           />
-                     </TouchableOpacity>  
-                  </View>
-                 <View style={{flex:1,justifyContent:'center',alignItems:'center',flexDirection:'row'}}>
-                    <Text style={{color:'#fff',fontSize:16,fontWeight:'bold'}}>航班动态查询       </Text>
-                </View>
+              <View style={{height:45,backgroundColor:'black',flexDirection:'row'}}>
+                    <View style={{width:45,height:45,justifyContent:'center'}}>
+                         <TouchableOpacity onPress={() => {this.buttonBackAction()}} style={{justifyContent:'center',alignItems:'center'}} >
+                               <Image 
+                                     style={{width:13,height:20}}
+                                     source={require('../../imgs/ic_center_back.png')}
+                               />
+                         </TouchableOpacity>  
+                    </View>
+                     <View style={{flex:1,justifyContent:'center',alignItems:'center',flexDirection:'row'}}>
+                        <Text style={{color:'#fff',fontSize:16,fontWeight:'bold'}}>航班动态查询       </Text>
+                     </View>
               
-                </View>
+              </View>
 
              <View style={{marginTop:25,marginLeft:5,marginRight:5,height:44,
                            flexDirection:'row',borderRadius:5,padding:2,
