@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css" media="screen">
+	/*如果把一个什么css都没有的空div放到有固定宽和高的div中做子元素,那么这个子div会有
+	默认的父元素宽度,但是高度为0*/
+	/*子元素设置padding或者maigin如果为百分数,那么padding或者margin的厚度都会统统以父元素的宽度width为标准*/
+	/*div不加overflow那么默认为overflow:visible*/
+	/*在windows7下,滚动条占据17px的宽度,这个宽度算进div的宽度里面,也就是如果出现滚动条,
+	那么div省下的宽度就是原来的宽度-17px*/
+	/*垂直方向上的margin会发生重叠*/
+	/*margin背景永远是透明的*/
+	/*浏览器html如果没有指定font-size那么默认为12或者14或者16px*/
+	 .box{
+	 	width:200px;
+	 	height:199px;
+	 	background-color: #cd0000;
+        overflow: auto;
+	 }
+	 .child{
+	 	padding:50%;
+	 	background-color: #f0f3f9;
+	 }
+
+    </style>
+</head>
+<body>
+	<div class="box">
+		<div class="child">111</div>
+	</div>
+</body>
+</html>

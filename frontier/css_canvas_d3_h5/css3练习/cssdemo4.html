@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+		.reflect-below-p {
+		    padding-bottom: 176px;
+		}
+		.reflect-below {
+		    -webkit-box-reflect: below;
+		}
+		.reflect-right {
+		    -webkit-box-reflect: right;
+		}
+		.reflect-right-translate {
+		    -webkit-box-reflect: right 10px;
+		}
+		.reflect-below-mask {
+		    -webkit-box-reflect: below 0 linear-gradient(transparent, white);
+		}
+		.reflect-below-img {
+		    -webkit-box-reflect: below 0 url(./imgs/shuai2.png);
+		}
+	</style>
+</head>
+<body>
+	<strong>下倒影</strong>
+	<p class="reflex-below-p">
+		<img src="./imgs/chaowei.jpg" alt="" class="reflect-below">
+	</p>
+	<!--  -->
+	<strong>右倒影</strong>
+	<p><img src="./imgs/chaowei.jpg" alt="" class="reflect-right"></p>
+    <strong>右倒影同时又间距</strong>
+    <p><img src="./imgs/chaowei.jpg" alt="" class="reflect-right-mask"></p>
+
+
+    <strong>下倒影同时有遮罩（线性渐变）</strong>
+    <p class="reflect-below-p"><img src="./imgs/chaowei.jpg" class="reflect-below-mask"></p>
+
+
+	<strong>下倒影同时有遮罩（使用png图片）</strong>
+	<p class="reflect-below-p"><img src="./imgs/chaowei.jpg" class="reflect-below-img"></p>
+</body>
+</html>
