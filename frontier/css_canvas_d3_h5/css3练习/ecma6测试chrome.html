@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		"user strict"
+		let b =0;
+		//let没有预解析
+		//let有块状作用域
+		{
+
+           //没有预解析和块状死区是一个意思
+           //也就是送块的开始到声明的区域,是死区
+           //以上是let的特性,而var是没有死区的,预解析的时候已经存在了
+			let a = 1;
+		}
+		document.title=0;
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

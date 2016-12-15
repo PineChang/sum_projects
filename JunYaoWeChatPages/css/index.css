@@ -1,0 +1,605 @@
+/*引入两个字体类型,一个是图标字体,一个是文字字体*/
+
+@import url('../fonts/font-awesome.min.css');
+
+/*@import url('../fonts/SourceHanSans/SourceHanSans.css');*/
+
+
+/*以下为公共样式*/
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dd {
+    margin: 0;
+    -webkit-text-size-adjust: 100%;
+    /*font-family:SourceHanSans;*/
+    text-align: center;
+    color: #888;
+}
+
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+a,
+input,
+button {
+    -webkit-tap-hightlight-color: rgba(0, 0, 0, 0);
+}
+
+html,
+body {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background: #EEEEEE;
+    -webkit-user-select: none;
+}
+
+div {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrap {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: none;
+}
+
+.wrap:target {
+    display: block !important;
+}
+
+
+/*模块1-运单查询*/
+
+.awbinput {
+    width: 90%;
+    height: 40%;
+    margin: 0 auto 1rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid rgba(128, 128, 128, 1);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.awbinput > .awblabel {
+    display: inline-block;
+    height: 1.1rem;
+    line-height: 1.2rem;
+    font-size: 0.756rem;
+    width: 5rem;
+    text-align: left;
+    color: rgba(132, 132, 132, 1);
+}
+
+.awbinput>span {
+    display: inline-block;
+    padding-bottom: 0.15rem;
+    padding-right: 0.3rem;
+    font-size: 0.756rem;
+    color: rgba(132, 132, 132, 1);
+}
+
+#awbpre,
+#awbno {
+    border: none;
+    height: 1.2rem;
+    padding-left: 0.2rem;
+    font-size: 0.8rem;
+    color: #4d4d4d;
+    background: rgba(0, 0, 0, 0);
+}
+
+#awbpre {
+    width: 2rem;
+}
+
+#awbno {
+    width: 4.5rem;
+}
+
+.awbbtn {
+    width: 90%;
+    height: 2.0rem;
+    text-align: center;
+    line-height: 2.2rem;
+    background: #ea145b;
+    color: white;
+    font-size: 0.8rem;
+    margin: 0 auto;
+    border-radius: 0.3rem;
+}
+
+
+/*以下是查询结果页面css*/
+
+.titleShow {
+    background: white;
+    padding-top: 0.8rem;
+    text-align: center;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.saireair {
+    background: white;
+    padding: 1.0rem 0;
+    height: 1.2rem;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+.saireair div {
+    float: left
+}
+
+.saireair > .air {
+    color: black;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    font-size: 1.0rem;
+    width: 3.0rem;
+}
+
+.saireair > .sair {
+    text-align: right;
+}
+
+.saireair > .eair {
+    text-align: left;
+}
+
+.saireair > .flighttrack {
+    color: #ee437c
+}
+
+.saireair > .flighttrack > .dottrack {
+    height: 0.50rem;
+    margin: 0 0.5rem;
+    width: 3.5rem;
+    border-bottom: 0.12rem dotted currentColor;
+}
+
+.saireair > .flighttrack > .icon-flight1 {
+    width: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.2rem;
+    height: 1.2rem;
+    margin-top: -0.1rem;
+}
+
+.trackdetail {
+    padding-top: 0.5rem;
+    box-sizing: border-box;
+}
+
+.detailItem {
+    height: 3.4rem;
+    overflow: hidden;
+}
+
+.detailItem > div {
+    float: left;
+}
+
+.detailItem > .detail-left {
+    width: 2.87rem;
+    height: 3.4rem;
+    font-size: 1rem;
+    color: #ef84a8;
+    line-height: 3.4rem;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+}
+
+.detailItem > .detail-middle {
+    font-size: 0.5rem;
+}
+
+.detailItem > .detail-middle:before {
+    content: "";
+    width: 0.05rem;
+    height: 3.4rem;
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%);
+    background-color: #ef84a8;
+}
+
+.detailItem > .detail-top {
+    font-size: 1.5rem;
+}
+
+.detailItem > .detail-top:before {
+    content: "";
+    width: 0.05rem;
+    height: 1.7rem;
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+    background-color: #ef84a8;
+}
+
+.detailItem > .detail-bottom {
+    font-size: 1rem;
+}
+
+.detailItem > .detail-bottom:before {
+    content: "";
+    width: 0.05rem;
+    height: 1.7rem;
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%);
+    background-color: #ef84a8;
+}
+
+.detailItem > .detail-right {
+    width: 12.29rem;
+    margin: 0.2225rem 0;
+    height: 2.955rem;
+    background: white;
+    position: relative;
+    padding: 0.2rem 0.5rem;
+    box-sizing: border-box;
+}
+
+.detailItem > .detail-right:before {
+    content: "";
+    position: absolute;
+    display: "block";
+    right: 100%;
+    top: 1.244rem;
+    height: 0.47rem;
+    width: 0.85rem;
+    background: white;
+    -webkit-clip-path: polygon(50% 50%, 100% 100%, 100% 0);
+}
+
+.detailItem > .detail-right>.row1,
+.detailItem > .detail-right>.row2 {
+    height: 1.2775rem;
+}
+
+.detailItem > .detail-right>.row1>div,
+.detailItem > .detail-right>.row2>div {
+    float: left;
+    height: 1.2775rem;
+    line-height: 1.2775rem;
+}
+
+.detailItem > .detail-right>.row1>div:nth-child(1) {
+    width: 50%;
+    text-align: left;
+    color: black;
+    font-size: 0.7rem;
+    box-sizing: border-box;
+}
+
+.detailItem > .detail-right>.row1>div:nth-child(2) {
+    width: 30%;
+    text-align: right;
+    color: #801b44;
+    font-size: 0.535rem;
+}
+
+.icon-flight2 {
+    font-size: 0.535rem;
+}
+
+.detailItem > .detail-right>.row1>div:nth-child(3) {
+    width: 20%;
+    text-align: right;
+    font-size: 0.535rem;
+}
+
+.detailItem > .detail-right>.row2>div:nth-child(1) {
+    width: 35%;
+    text-align: left;
+    box-sizing: border-box;
+    color: #f05b8d;
+    font-size: 0.6rem;
+}
+
+.detailItem > .detail-right>.row2>div:nth-child(2) {
+    width: 65%;
+    text-align: right;
+    font-size: 0.535rem;
+}
+
+
+/*模块2-我要发货*/
+#deliveryGoods{
+	padding-top:0.1rem;
+}
+
+#deliveryGoods > div {
+    width: 15.6rem;
+    margin: 0 auto;
+    overflow:hidden;
+    border: 1px solid black;
+}
+
+#deliveryGoods > .sendreceive {
+    position: relative;
+    min-height: 3.95rem;
+}
+#deliveryGoods > .sendreceive .row > div {
+    float: left;
+}
+
+#deliveryGoods > .sendreceive > input {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 3.95rem;
+    opacity: 0;
+}
+#deliveryGoods > .sendreceive > .row{
+    height: 3.98rem;
+}
+
+
+/*初始装填*/
+
+#deliveryGoods > .sendreceive > .collapseji,
+#deliveryGoods > .sendreceive > .collapseshou {
+    height: 0;
+    -webkit-transition: height 0.5s ease-out;
+}
+
+#deliveryGoods > .sendreceive > .collapseji div,
+#deliveryGoods > .sendreceive > .collapseshou div {
+    overflow: hidden;
+    width: 15.5rem;
+    height: 1.6rem;
+}
+
+#deliveryGoods > .sendreceive > .collapseji span,
+#deliveryGoods > .sendreceive > .collapseshou span {
+    float: left;
+    width: 4.5rem;;;;
+    height: 1.3rem;
+    line-height: 1.3rem;
+    margin: 0.1rem 0;
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+#deliveryGoods > .sendreceive > .collapseji input,
+#deliveryGoods > .sendreceive > .collapseshou input {
+    float: left;;;
+    width: 10rem;;
+    height: 1.3rem;
+    line-height: 1.3rem;
+    margin: 0.1rem 0;
+    text-align: center;
+    font-size: 0.7rem;
+    border: none;
+}
+
+
+/*点击后的状态*/
+
+#deliveryGoods > .sendreceive > .radioji:checked ~ .collapseji,
+#deliveryGoods > .sendreceive > .radioshou:checked ~ .collapseshou {
+    height: 6.7rem;
+}
+
+#deliveryGoods > .sendreceive > .radioji:checked ~ .row > div:last-child {
+    transform: rotate(90deg) scale(1.7);
+    color: #40c48a;
+}
+
+#deliveryGoods > .sendreceive > .radioshou:checked ~ .row > div:last-child {
+    transform: rotate(90deg) scale(1.7);
+    color: #9d9dff;
+}
+
+#deliveryGoods > .sendreceive > .radioji:checked ~ .row > div:first-child,
+#deliveryGoods > .sendreceive > .radioshou:checked ~ .row > div:first-child {
+    font-size: 2rem;
+}
+
+#deliveryGoods > .send .row > div:nth-of-type(1) {
+    margin: 0.225rem 0.3rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1rem;
+    line-height: 3.5rem;
+    border-radius: 100%;
+    background-color: #40c48a;
+    color: white;
+    -webkit-transition: all 0.5s ease-out;
+}
+
+#deliveryGoods > .receive .row > div:nth-of-type(1) {
+    margin: 0.225rem 0.3rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1rem;
+    line-height: 3.5rem;
+    border-radius: 100%;
+    background-color: #9d9dff;
+    color: white;
+    -webkit-transition: all 0.5s ease-out;
+}
+
+#deliveryGoods > .sendreceive .row > div:nth-of-type(2) {
+    width: 9rem;
+    height: 3.95rem;
+    line-height: 3.95rem;
+    font-size: 0.85rem;
+}
+
+#deliveryGoods > .sendreceive .row >div:nth-of-type(3) {
+    height: 3.95rem;
+    margin: 0 0.54rem;
+    width: 1.22rem;
+    line-height: 3.95rem;
+    font-size: 1.3rem;
+    transition: all 0.5s ease-out;
+}
+
+#deliveryGoods > .goodsInfo > .goodsTitle {
+    height: 2rem;
+    padding-left: 0.3rem;
+    line-height: 2rem;
+    font-size: 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid black;
+}
+
+#deliveryGoods > .goodsInfo > .goodsForm {
+    padding-top: 0.2rem;
+    padding-left: 0.3rem;
+    text-align: left;
+    line-height: 1.0rem;
+    font-size: 0.7rem;
+}
+/*
+#goodsDesc,
+#goodsWeight,
+#goodsPcs {
+    width: 90%;
+    height: 1.5rem;
+    font-size: 0.7rem;
+    line-height: 1.5rem;
+    border: 2px solid #888;
+    padding-left: 0.2rem;
+    margin: 0.4rem 0 0 0;
+}*/
+#goodsDesc{
+    width: 90%;
+    height: 1.5rem;
+    font-size: 0.7rem;
+    line-height: 1.5rem;
+    border: 2px solid #888;
+    padding-left: 0.2rem;
+    margin: 0.4rem 0 0 0;
+}
+
+#goodsMask{
+    width:90%;
+    height:5rem;
+    font-size:0.7rem;
+    line-height: 0.9rem;
+    border:2px solid #888;
+    padding-left:0.2rem;
+    margin:0.4rem 0 0 0;
+}
+
+/*
+#goodsPcs {
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+#deliveryGoods .goodsForm>span {
+    display: inline-block;
+    width: 22%;
+}
+
+#deliveryGoods .goodsForm>[type="checkbox"] {
+    width: 0.7rem;
+    height: 0.7rem;
+    vertical-align: -0.1rem;
+    margin-right: 0.1rem;
+}
+
+#homeDelivery {
+    margin-left: 0.1rem;
+}
+
+#doorToDoor {
+    margin-left: 2.5rem;
+}
+*/
+#deliveryGoods [type="button"] {
+    display: block;
+    margin: 3rem auto 0.5rem;
+    width: 5rem;
+    height: 1.3rem;
+    font-size: 0.6rem;
+    border: 2px inset #111;
+    border-radius: 0.2rem;
+    font-family: SourceHanSans;
+}
+
+
+/*订单查询*/
+
+
+/*运输规则*/
+
+
+/*联系我们*/
+
+
+/*
+#header{
+	position:absolute;
+	background:#a61c4b;
+	left:0;
+	top:0;
+	width:100%;
+	z-index:2;
+	height:1.8rem;
+	display:-webkit-flex;
+	-webkit-justify-content: center;
+	-webkit-align-items: center;
+	-webkit-flex-flow:row wrap;
+
+}
+#header>.leftView,#header>.rightView{
+	-webkit-flex:1 1 auto;
+	height:1.8rem;
+
+}
+#header>.middleView{
+	-webkit-flex:6 6 auto;
+	height:1.8rem;
+	line-height: 1.8rem;
+	font-size:1rem;
+	color:white;
+}
+
+#content{
+	margin-top:1.8rem;
+	background: #eee;
+	height: 100%;
+}
+*/

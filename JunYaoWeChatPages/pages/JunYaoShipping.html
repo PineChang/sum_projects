@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewpoint" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="render" content="webkit" />
+    <meta name="screen-orientation" content="portrait" />
+    <meta name="x5-orientation" content="portrait" />
+    <meta content="telephone=no" name="format-detection" />
+    <link href="../css/index.css" rel="stylesheet" />
+    <link href="../css/alert.css" rel="stylesheet" />
+     <link href="../css/LArea.css" rel="stylesheet" />
+    <link href="../fonts/moon/moon.css" rel="stylesheet" />
+    <title>吉祥移动货运</title>
+    <script type="text/javascript">
+    //以下用来使当页面resize或者方向发生改变的的时候,触发的调整动作
+    var html = document.querySelector("html");
+    var width = html.getBoundingClientRect().width;
+    html.style.fontSize = width / 16 + "px";
+    </script>
+</head>
+
+<body>
+    <!--0.运单号查询-->
+    <section id="awbQuery" class="wrap">
+        <div class="awbinput">
+            <span class="icon-AWB2"></span>
+            <label class="awblabel" for="awbno">&nbsp;运单号</label>
+            <input id="awbpre" type="number" value="018" disabled/>
+            <input type="number" id="awbno" />
+        </div>
+        <div class="awbbtn">查询</div>
+    </section>
+    <!-- 1.运单号查询结果-->
+    <section id="awbQueryResult" class="wrap">
+        <div class="titleShow">018-45645633</div>
+        <div class="saireair">
+            <div class="air sair">上海</div>
+            <div class="flighttrack">
+                <div class="dottrack"></div>
+                <div class="icon-flight1"></div>
+                <div class="dottrack"></div>
+            </div>
+            <div class="air eair">虹桥</div>
+        </div>
+        <div id="trackcontainer" class="trackdetail" style="overflow:auto">
+        </div>
+        <div id="trackTemplate" style="display:none">
+            <div id="topItem" class="detailItem">
+                <div class="detail-left detail-top"><span class="icon-location"><span class="path1"></span><span class="path2"></span></span>
+                </div>
+                <div class="detail-right">
+                    <div class="row1">
+                        <div></div>
+                        <div><span class="icon-flight2"></span><span></span></div>
+                        <div></div>
+                    </div>
+                    <div class="row2">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div id="middleItem" class="detailItem">
+                <div class="detail-left detail-middle"><span class="icon-point"></span></div>
+                <div class="detail-right">
+                    <div class="row1">
+                        <div></div>
+                        <div><span class="icon-flight2"></span><span></span></div>
+                        <div></div>
+                    </div>
+                    <div class="row2">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div id="bottomItem" class="detailItem">
+                <div class="detail-left detail-bottom"><span class="icon-start"><span class="path1"></span><span class="path2"></span></span>
+                </div>
+                <div class="detail-right">
+                    <div class="row1">
+                        <div></div>
+                        <div><span class="icon-flight2"></span><span></span></div>
+                        <div></div>
+                    </div>
+                    <div class="row2">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 2.我要发货 -->
+    <section id="deliveryGoods" class="wrap">
+        <div class="sendreceive send">
+            <input class="radioji" type="checkbox" />
+            <div class="row">
+                <div>寄</div>
+                <div>请选择寄件人详细地址</div>
+                <div class="arrow">></div>
+            </div>
+            <div class="collapseji">
+                <div><span>姓名:</span>
+                    <input id="sendName" type="text" placeholder="请填写真实姓名" />
+                </div>
+                <div><span>电话号码:</span>
+                    <input id="sendTel" type="text" placeholder="请输入手机号或者电话号码" />
+                </div>
+                <div><span>选择城市:</span>
+                    <input id="addr1" type="text" readonly="" placeholder="城市选择特效"  value="广东省,深圳市,南山区"/>
+                    <input id="value1" type="hidden" value="20,234,504"/>
+                </div>
+                <div><span>详细地址:</span>
+                    <input id="sendAddr" type="text" placeholder="请详细到门牌号"/>
+                </div>
+            </div>
+        </div>
+        <div class="sendreceive receive">
+            <input class="radioshou" type="checkbox" />
+            <div class="row">
+                <div>收</div>
+                <div>请选择收件人详细地址</div>
+                <div class="arrow">></div>
+            </div>
+            <div class="collapseshou">
+                <div><span>姓名:</span>
+                    <input id="receiveName" type="text" placeholder="请填写真实姓名" />
+                </div>
+                <div><span>电话号码:</span>
+                    <input id="receiveTel" type="text" placeholder="请输入手机号或者电话号码" />
+                </div>
+                <div><span>选择城市:</span>
+                    <input id="addr2" type="text" readonly="" placeholder="城市选择特效"  value="广东省,深圳市,南山区"/>
+                    <input id="value2" type="hidden" value="20,234,504"/>
+                </div>
+                <div><span>详细地址:</span>
+                    <input id="receiveAddr" type="text" placeholder="请详细到门牌号">
+                </div>
+            </div>
+        </div>
+        <div class="goodsInfo">
+            <div class="goodsTitle">货物信息</div>
+            <form class="goodsForm">
+                <input id="goodsDesc" type="text" placeholder="简单描述下货物,比如显示器" />
+                <textarea id="goodsMask" placeholder="货物备注信息,比如长宽高,体积,重量,件数等"></textarea>
+              <!--  <input id="goodsWeight" type="number" placeholder="每件货物重量,单位为公斤" />
+                <span>长CM</span><span>宽CM</span>
+                <span>高CM</span>
+                <span>M3</span>
+                <input id="goodsPcs" type="number" placeholder="货物件数" />
+                <br/>
+                <input id="homeDelivery" value="1" type="checkbox" />上门取货
+                <input id="doorToDoor" value="2" type="checkbox" />送货上门-->
+                <input id="submitSendReceive" type="button" value="提交" />
+            </form>
+        </div>
+    </section>
+    <!-- 3.订单查询 -->
+    <section id="orderQuery" class="wrap">
+		
+
+		
+    		
+	
+
+    </section>
+    <!-- 4.运输规定 -->
+    <section id="transportRegulations" class="wrap">
+    </section>
+    <!-- 5.联系我们 -->
+    <section id="contactUs" class="wrap">
+    </section>
+    <!-- 使用异步加载的方式,并且制定js入口为main.js-->
+    <script src="../js/framework/require.js" defer async=true data-main="../js/main.js"></script>
+</body>
+
+</html>
