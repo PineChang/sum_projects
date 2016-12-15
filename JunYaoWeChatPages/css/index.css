@@ -340,14 +340,15 @@ div {
 
 
 /*模块2-我要发货*/
-#deliveryGoods{
-	padding-top:0.1rem;
+
+#deliveryGoods {
+    padding-top: 0.1rem;
 }
 
 #deliveryGoods > div {
     width: 15.6rem;
     margin: 0 auto;
-    overflow:hidden;
+    overflow: hidden;
     border: 1px solid black;
 }
 
@@ -355,6 +356,7 @@ div {
     position: relative;
     min-height: 3.95rem;
 }
+
 #deliveryGoods > .sendreceive .row > div {
     float: left;
 }
@@ -368,7 +370,8 @@ div {
     height: 3.95rem;
     opacity: 0;
 }
-#deliveryGoods > .sendreceive > .row{
+
+#deliveryGoods > .sendreceive > .row {
     height: 3.98rem;
 }
 
@@ -391,7 +394,10 @@ div {
 #deliveryGoods > .sendreceive > .collapseji span,
 #deliveryGoods > .sendreceive > .collapseshou span {
     float: left;
-    width: 4.5rem;;;;
+    width: 4.5rem;
+    ;
+    ;
+    ;
     height: 1.3rem;
     line-height: 1.3rem;
     margin: 0.1rem 0;
@@ -401,8 +407,11 @@ div {
 
 #deliveryGoods > .sendreceive > .collapseji input,
 #deliveryGoods > .sendreceive > .collapseshou input {
-    float: left;;;
-    width: 10rem;;
+    float: left;
+    ;
+    ;
+    width: 10rem;
+    ;
     height: 1.3rem;
     line-height: 1.3rem;
     margin: 0.1rem 0;
@@ -490,6 +499,8 @@ div {
     line-height: 1.0rem;
     font-size: 0.7rem;
 }
+
+
 /*
 #goodsDesc,
 #goodsWeight,
@@ -502,7 +513,8 @@ div {
     padding-left: 0.2rem;
     margin: 0.4rem 0 0 0;
 }*/
-#goodsDesc{
+
+#goodsDesc {
     width: 90%;
     height: 1.5rem;
     font-size: 0.7rem;
@@ -512,15 +524,16 @@ div {
     margin: 0.4rem 0 0 0;
 }
 
-#goodsMask{
-    width:90%;
-    height:5rem;
-    font-size:0.7rem;
+#goodsMask {
+    width: 90%;
+    height: 5rem;
+    font-size: 0.7rem;
     line-height: 0.9rem;
-    border:2px solid #888;
-    padding-left:0.2rem;
-    margin:0.4rem 0 0 0;
+    border: 2px solid #888;
+    padding-left: 0.2rem;
+    margin: 0.4rem 0 0 0;
 }
+
 
 /*
 #goodsPcs {
@@ -548,6 +561,7 @@ div {
     margin-left: 2.5rem;
 }
 */
+
 #deliveryGoods [type="button"] {
     display: block;
     margin: 3rem auto 0.5rem;
@@ -562,6 +576,123 @@ div {
 
 /*订单查询*/
 
+.orderForm {
+    height: 3.175rem;
+    padding: 0.661rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-bottom: 1px solid currentColor;
+}
+
+#telInput,
+#orderBtn {
+    float: left;
+    height: 1.85rem;
+    font-size: 0.756rem;
+    line-height: 1.80rem;
+    text-align: center;
+   
+}
+
+#telInput {
+    width: 10.85rem;
+    padding-left: 0.22rem;
+    margin-right: 0.246rem;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+#orderBtn {
+    width: 3.4rem;
+    -webkit-appearance: none;
+    background-color: #ea145b;
+    border: none;
+    color: white;
+}
+
+#orderContainer {
+    padding: 0.668rem;
+}
+
+.orderItem > .orderDetail {
+    overflow: hidden;
+    background: white;
+    margin-bottom: 0.2rem;;
+}
+
+.orderItem > .orderDetail > .orderTitle {
+    height: 1.91rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid currentColor;
+    line-height: 1.9rem;
+    font-size: 0.756rem;
+    text-align: left;
+    color:black;
+}
+.orderItem > .orderDetail > .orderTitle>span{
+    margin:0.63rem;
+    color:#f637ba;
+}
+.orderItem > .orderDetail > .orderInfo {
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-left: 6.129rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.orderItem > .orderDetail > .orderInfo>div{
+    line-height:1.06rem;
+    font-size: 0.756rem;
+    float: left;
+    text-align: left;
+    overflow: hidden;
+}
+.orderItem > .orderDetail > .orderInfo>div:nth-of-type(odd){
+    width:4.115rem;
+    margin-left:-4.115rem;
+    text-align:left;
+    clear:left;
+    height:1.07rem;
+
+}
+.orderItem > .orderDetail > .orderInfo>div:nth-of-type(2){
+    width:8.0rem;
+    height:1.07rem;
+    color:black;
+
+}
+.orderItem > .orderDetail > .orderInfo>div:nth-of-type(4){
+     width:8.0rem;
+     color:black;
+    
+}
+.orderItem > .receiverDetail {
+    overflow: hidden;
+    background: white;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 0 0.5rem;;;
+}
+.orderItem > .receiverDetail > .receiverTitle{
+    text-align: left;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 0.764rem;
+    color: black;
+
+}
+.orderItem > .receiverDetail > .receiverTitle > span{
+    margin: 0 0.265rem 0 1.934rem;
+    color: #f637ba;;
+
+}
+.orderItem > .receiverDetail > .receiverTitle{
+    
+}
+.orderItem > .receiverDetail > .receiverTitle>div{
+    
+}
 
 /*运输规则*/
 
@@ -571,35 +702,35 @@ div {
 
 /*
 #header{
-	position:absolute;
-	background:#a61c4b;
-	left:0;
-	top:0;
-	width:100%;
-	z-index:2;
-	height:1.8rem;
-	display:-webkit-flex;
-	-webkit-justify-content: center;
-	-webkit-align-items: center;
-	-webkit-flex-flow:row wrap;
+    position:absolute;
+    background:#a61c4b;
+    left:0;
+    top:0;
+    width:100%;
+    z-index:2;
+    height:1.8rem;
+    display:-webkit-flex;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    -webkit-flex-flow:row wrap;
 
 }
 #header>.leftView,#header>.rightView{
-	-webkit-flex:1 1 auto;
-	height:1.8rem;
+    -webkit-flex:1 1 auto;
+    height:1.8rem;
 
 }
 #header>.middleView{
-	-webkit-flex:6 6 auto;
-	height:1.8rem;
-	line-height: 1.8rem;
-	font-size:1rem;
-	color:white;
+    -webkit-flex:6 6 auto;
+    height:1.8rem;
+    line-height: 1.8rem;
+    font-size:1rem;
+    color:white;
 }
 
 #content{
-	margin-top:1.8rem;
-	background: #eee;
-	height: 100%;
+    margin-top:1.8rem;
+    background: #eee;
+    height: 100%;
 }
 */

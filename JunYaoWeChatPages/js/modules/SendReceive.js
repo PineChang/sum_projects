@@ -34,14 +34,15 @@ define(['jquery', 'utils/util', 'utils/alert'], function($, util, alert) {
         //发送请求
         $(".gifAnim").css("display", "flex");
         util._ajax_submit_service(url,str_data, function(json) {
-
+             console.log("进入成功的方法了")
             $(".gifAnim").css("display", "none");
             console.log(json)
 
             //alert.jAlert(json, "提示", null, "确定");
 
 
-        }, function(e, x) {
+        }, function(e,x) {
+            console.log("进入失败的方法了")
             $(".gifAnim").css("display", "none");
             alert.jAlert("网络错误"+x.responseText, "提示", null, "确定")
 
