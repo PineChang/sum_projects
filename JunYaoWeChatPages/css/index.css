@@ -614,12 +614,49 @@ div {
 
 #orderContainer {
     padding: 0.668rem;
+   
+}
+#orderContainer>.noQueryPic{
+
+    height:13rem;
+    background: url('../imgs/noQuery.png') no-repeat center center; 
+}
+.orderItem{
+    position:relative;
+    border-bottom:1.2rem solid white;
+    margin-bottom:0.4rem;
 }
 
+.orderItem>.moreInfo{
+    display:block;
+    position:absolute;
+    bottom:-1rem;
+    left:0;
+    width:100%;
+    height:1.0rem;
+}
+.orderItem>.moreInfoInput{
+    display:block;
+    position:absolute;
+    bottom:-1.2rem;
+    left:0;
+    width:100%;
+    height:1.2rem;
+    z-index:100;
+    opacity:0;
+
+}
+.orderItem>.moreInfoInput:checked+div{
+    display:block;
+
+}
+.orderItem>.moreInfoInput:checked~.moreInfo>i:before{
+    content:'\f102';
+
+}
 .orderItem > .orderDetail {
     overflow: hidden;
-    background: white;
-    margin-bottom: 0.2rem;;
+    background: white;;
 }
 
 .orderItem > .orderDetail > .orderTitle {
@@ -631,7 +668,7 @@ div {
     text-align: left;
     color:black;
 }
-.orderItem > .orderDetail > .orderTitle>span{
+.orderItem > .orderDetail > .orderTitle>.icon-AWB2{
     margin:0.63rem;
     color:#f637ba;
 }
@@ -671,8 +708,9 @@ div {
 .orderItem > .receiverDetail {
     overflow: hidden;
     background: white;
-    margin-bottom: 0.5rem;
-    padding: 0.5rem 0 0.5rem;;;
+    padding: 0.5rem 0 0.1rem;
+    margin-top: 0.2rem;
+    display: none;
 }
 .orderItem > .receiverDetail > .receiverTitle{
     text-align: left;
@@ -687,10 +725,48 @@ div {
     color: #f637ba;;
 
 }
-.orderItem > .receiverDetail > .receiverTitle{
+.orderItem > .receiverDetail > .receiverInfo{
+    overflow: hidden;
+    padding-left: 3.71rem;
     
 }
-.orderItem > .receiverDetail > .receiverTitle>div{
+.orderItem > .receiverDetail > .receiverInfo>div{
+    float: left; 
+    line-height: 1.07rem;
+    font-size:0.756rem;
+    
+}
+.orderItem > .receiverDetail > .receiverInfo>div:nth-of-type(odd){
+  width:3.72rem;
+  clear:left;
+  height:1.07rem;
+  text-align:right;
+  margin-left:-3.71rem;
+    
+}
+.orderItem > .receiverDetail > .receiverInfo>div:nth-of-type(2),
+.orderItem > .receiverDetail > .receiverInfo>div:nth-of-type(4)
+{
+  width:90%;
+  color:black;
+  height:1.07rem;
+  padding-left: 0.81rem;
+  text-align:left;
+  overflow:hidden;
+    
+}
+.orderItem > .receiverDetail > .receiverInfo>div:nth-of-type(6){
+  width:90%;
+  color:black;
+  padding-left: 0.81rem;
+  text-align:left;
+    
+}
+.orderItem > .receiverDetail > .receiverInfo>div:nth-of-type(8){
+  width:90%;
+  color:black;
+  padding-left: 0.81rem;
+  text-align:left;
     
 }
 

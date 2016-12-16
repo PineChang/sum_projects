@@ -27,22 +27,27 @@ define(['jquery', 'utils/util', 'utils/alert'], function($, util, alert) {
         }
 
         //组织请求参数
-        var jsonParam = "{\"city1\":\"" + basicInputs.addr1.valStr + "\",\"city2\":\"" + basicInputs.addr2.valStr + "\",\"RECEIVER_ADDRESS\":\"" + basicInputs.receiveAddr.valStr + "\",\"RECEIVER_MOBILE\":\"" + basicInputs.receiveTel.valStr + "\",\"RECEIVER_NAME\":\"" + basicInputs.receiveName.valStr + "\",\"SENDER_ADDRESS\":\"" + basicInputs.sendAddr.valStr + "\",\"SENDER_MOBILE\":\"" + basicInputs.sendTel.valStr + "\",\"SENDER_NAME\":\"" + basicInputs.sendName.valStr + "\",\"REMARK\":\"" + basicInputs.goodsMask.valStr + "\",\"COMMODITY\":\"" + basicInputs.goodsDesc.valStr + "\"}";
+        var jsonParam = "{\"SENDER_PCD\":\"" + basicInputs.addr1.valStr + "\",\"RECEIVER_PCD\":\"" + basicInputs.addr2.valStr + "\",\"RECEIVER_ADDRESS\":\"" + basicInputs.receiveAddr.valStr + "\",\"RECEIVER_MOBILE\":\"" + basicInputs.receiveTel.valStr + "\",\"RECEIVER_NAME\":\"" + basicInputs.receiveName.valStr + "\",\"SENDER_ADDRESS\":\"" + basicInputs.sendAddr.valStr + "\",\"SENDER_MOBILE\":\"" + basicInputs.sendTel.valStr + "\",\"SENDER_NAME\":\"" + basicInputs.sendName.valStr + "\",\"REMARK\":\"" + basicInputs.goodsMask.valStr + "\",\"COMMODITY\":\"" + basicInputs.goodsDesc.valStr + "\"}";
         var str_data = 'AppInput='+jsonParam;
         //组织url
-        var url = "http://172.21.129.147:222/WebService/MOAPPService.asmx/MoAppOrder";
+        var url = util.getHoUrl()+"MoAppOrder";
         //发送请求
         $(".gifAnim").css("display", "flex");
+        console.log(jsonParam);
         util._ajax_submit_service(url,str_data, function(json) {
-             console.log("进入成功的方法了")
+            
             $(".gifAnim").css("display", "none");
-            console.log(json)
+            if(json.CODE=="0"){
+                 alert.jAlert(json.REMARK, "提示", null, "确定");
 
-            //alert.jAlert(json, "提示", null, "确定");
+            }else{
+                alert.jAlert(json.REMARK, "错误提示", null, "确定");
 
+            }
 
+           
         }, function(e,x) {
-            console.log("进入失败的方法了")
+           
             $(".gifAnim").css("display", "none");
             alert.jAlert("网络错误"+x.responseText, "提示", null, "确定")
 

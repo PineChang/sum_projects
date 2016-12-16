@@ -42,7 +42,7 @@ define(['jquery'],function($){
     var getHoUrl = function(){
 
     	 //return "http://cargotest.ce-air.com/HOServiceForApp/";
-         return "http://172.21.129.141/";
+         return "http://172.21.129.147:222/WebService/MOAPPService.asmx/";
          //HOServiceForApp/";
     }
 
