@@ -10,9 +10,7 @@
     <meta name="screen-orientation" content="portrait" />
     <meta name="x5-orientation" content="portrait" />
     <meta content="telephone=no" name="format-detection" />
-    <link href="../css/index.css" rel="stylesheet" />
-    <link href="../css/alert.css" rel="stylesheet" />
-    <link href="../css/LArea.css" rel="stylesheet" />
+    <link href="../css/all.min.css" rel="stylesheet" />
     <link href="../fonts/moon/moon.css" rel="stylesheet" />
     <title>吉祥移动货运</title>
     <script type="text/javascript">
@@ -167,12 +165,9 @@
             <input id="orderBtn" type="button" value="搜订单" />
         </form>
         <div id="orderContainer">
-            
-           
         </div>
-        
         <div style="display:none">
-             <div id="orderItemTemplate" class="orderItem">
+            <div id="orderItemTemplate" class="orderItem">
                 <div class="orderDetail">
                     <div class="orderTitle">
                         <span class="icon-AWB2"></span><span>订单号&nbsp;ABCDEF12222222222222</span>
@@ -207,6 +202,23 @@
     </section>
     <!-- 5.联系我们 -->
     <section id="contactUs" class="wrap">
+        <div class="contactInfo">
+            <div class="contactTitle"><span class="icon-location2"></span>上海营业部</div>
+            <div class="contactDetail">营业部货运订舱24小时服务热线：<br/> <a href="tel:021-62207736">021-62207736</a><br/>传真号:021-51687719<br/>客服(售后/投诉)热线:95520-1-7<br/>营业时间:24小时<br/>地址:上海市闵行区吴漕路868号(天山西路与七莘路路口) 
+            </div>
+        </div>
+        <div class="contactInfo">
+            <div class="contactTitle"><span class="icon-location2"></span>虹桥进港提货</div>
+            <div class="contactDetail">
+                电话:<a href="tel:021-22369480">021-22369480</a> <br/>地址:上海市闵行区七莘路与仙霞西路路口（辅道进入）东航货站进港营业厅
+            </div>
+        </div>
+        <div class="contactInfo">
+            <div class="contactTitle"><span class="icon-location2"></span>浦东进港提货</div>
+            <div class="contactDetail">
+                电话:<a href="tel:021-68851331">021-68851331</a> <br/>地址:上海浦东机场工作区 速航路300号
+            </div>
+        </div>
     </section>
     <!-- 使用异步加载的方式,并且制定js入口为main.js-->
     <script src="../js/framework/require.js" defer async=true data-main="../js/main.js"></script>

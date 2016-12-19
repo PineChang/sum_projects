@@ -775,6 +775,32 @@ div {
 
 /*联系我们*/
 
+#contactUs>.contactInfo{
+    margin:0.712rem;
+    background: white;
+    color:black;
+}
+#contactUs>.contactInfo>.contactTitle{
+    height:1.909rem;
+    line-height:1.89rem;
+    font-size:0.712rem;
+    border-bottom: 1px solid black;
+    text-align:left;
+}
+#contactUs>.contactInfo>.contactTitle>span{
+    margin:0 0.554rem;
+    font-size:0.8rem;
+    color: #f05b8d;
+}
+#contactUs>.contactInfo>.contactDetail{
+
+    padding:0.687rem  1.041rem 0.687rem 1.782rem;
+    line-height:1rem;
+    text-align:left;
+
+    font-size:0.623rem;
+
+}
 
 /*
 #header{
