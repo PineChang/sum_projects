@@ -22,14 +22,14 @@ define(['jquery','utils/util','utils/alert'],function($,util,alert){
         querybulk = {"awbpre":awbpre,"awbno":awbno};
         localStorage.setItem("querybulk",JSON.stringify(querybulk));
             //第一项服务器端发送请求;
-        var loginURL = util.getHoUrl()+"CommonQuery/QueryAwbInfo";
-            var data = {};
-                data["awbpara.Stockpre"] = awbpre;
-                data["awbpara.Stockno"] = awbno;
-            //提交之前弹出正在加载的窗口
-           $(".gifAnim").css("display","flex");
-            //进行ajax数据提交
-           util._ajax_submit(loginURL,data,function(json){
+            //组织请求参数
+        var jsonParam = "{\"Stockpre\":\"" + awbpre+ "\",\"Stockno\":\""+awbno+"\"}";
+        var str_data = 'AppInput='+jsonParam;
+        //组织url
+        var url = util.getHoUrl()+"GetAppAwb";
+        //发送请求
+        $(".gifAnim").css("display", "flex");
+        util._ajax_submit_service(url,str_data, function(json) {
                      $(".gifAnim").css("display","none");
                      if (json.CODE!= -1) {
                         if(json.OTHEROBJ&&json.OTHEROBJ.Awbfsulist&&json.OTHEROBJ.Awbfsulist.length>0){
