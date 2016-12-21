@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="mycircle.css" rel="stylesheet"/>
+     <script type="text/javascript">
+    //以下用来使当页面resize或者方向发生改变的的时候,触发的调整动作
+    var html = document.querySelector("html");
+    var width = html.getBoundingClientRect().width;
+    html.style.fontSize = width / 16 + "px";
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="dot"></div>
+        <div class="pulse"></div>
+        <div class="pulse1"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+.container {
+    width: 40px;;;
+    background: red;
+    position: relative;
+    height: 40px;
+}
+
+.dot {
+    position: absolute;
+    width: 92px;
+    height: 92px;
+    left: 120px;
+    top: 120px;
+    border-radius: 50%;
+    border: 2px solid red;
+    z-index: 2;;}
+
+
+.pulse {
+    border: 6px solid red;
+    width: 320px;
+    height: 320px;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 1px 1px 30px red;
+    opacity: 0;
+    -webkit-animation: warn 2s ease-out;
+    -webkit-animation-iteration-count: infinite;;}
+
+.pulse1 {
+    position: absolute;
+    border: 6px solid red;
+    width: 320px;
+    height: 320px;
+    left: 2px;
+    z-index: 1;}
+
+@keyframes warn {
+	0%{
+		transform:scale(0.3);
+		opacity:0.0;
+	}
+	25%{
+		transform:scale(0.3);
+		opacity:0.1;
+	}
+	50%{
+		transform:scale(0.5);
+		opacity:0.3;
+	}
+	75%{
+		transform:scale(0.8);
+		opacity: 0.5;
+	}
+	100%{
+		transform:scale(1);
+		opacity:0;
+	}
+}
+
+@keyframes warn1{
+	0%{
+		transform:scale(0.3);
+		opacity:0.0;
+
+	};
+	25%{
+		transform:scale(0.3);
+		opacity:0.1;
+	}
+	50%{
+		transform:scale(0.3);
+		opacity:0.3;
+	}
+	75%{
+		transform:scale(0.5);
+		opacity: 0.5;
+	}
+	100%{
+		transform:scale(0.8);
+		opacity:0;
+	}
+}
